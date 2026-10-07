@@ -3,13 +3,45 @@ body {
   background-color: black;
 }
 
-.circle {
-  width: var(--circle-size);
-  height: var(--circle-size);
-  border: 2px var(--border-style) blue;
+.center-position {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+.core {
+  height: 200px;
+  width: 200px;
+  background-color: white;
+  border-radius: 50%;
+}
+.border{
+  border-radius: 50px;
+}
+
+.circle {
   border-radius: 500px;
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border: var(--border-width) var(--border-style) aqua;
+  filter: drop-shadow(0 0 20px aqua);
+  animation: spin 10s linear infinite;
+  animation-direction: var(--direction, normal);
+}
+
+@keyframes spin {
+  from {
+    transform: translate(-50%, -50%) rotate(0);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+  }
+}
+
+.hamgiin-gadnah {
+  box-shadow: 0 0 20px aqua, inset 0 0 10px aqua;
+}
+.duruvdeh-border{
+  box-shadow: 0 0 20px aqua, inset 0 0 10px aqua;
 }
